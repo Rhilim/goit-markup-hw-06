@@ -183,7 +183,7 @@ address {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.33;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
   border-radius: 4px;
@@ -224,6 +224,29 @@ address {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-color: transparent;
+}
+
+.subscribe-btn {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  right: 0;
+  bottom: 0;
+  color: var(--body-backgroung-color);
+  background: var(--logo-primbutton-color);
+  margin-left: 24px;
+  border-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  color: var(--body-backgroung-color); 
+  background-color: var(--active);
 }
 
 /* sections */
@@ -513,7 +536,6 @@ address {
 .footer-form {
   display: flex;
   width: 453px;
-  outline: 1px solid tomato;
   margin-left: 80px;
   margin-right: auto;
   position: relative;
@@ -521,6 +543,7 @@ address {
 .form-field {
   display: flex;
   flex-direction: column;
+  
 }
 .form-label {
   display: block;
@@ -538,23 +561,12 @@ address {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-.subscribe-btn {
-  position: absolute;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 24px;
 
-  width: 165px;
-  height: 40px;
-  right: 0;
-  bottom: 0;
-  background: var(--active);
-  margin-left: 24px;
-}
 
 /*------ PORTFOLIO -------*/
 .list.card-set {
