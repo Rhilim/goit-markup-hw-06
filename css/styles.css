@@ -648,10 +648,11 @@ display: inline-block;
 
 .modal {
   position: absolute;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   width: 408px;
-  height: 576px;
+  height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -738,4 +739,102 @@ display: inline-block;
 
 .close-btn:hover .close-svg {
   fill: var(--body-backgroung-color);
+}
+
+.title-modal{
+  width: 360px;
+  height: 24px;
+  margin: 72px 24px 16px 24px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  gap: 8px;
+}
+.modal-container{
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+  width: 360px;
+  
+  /* outline: 1px solid tomato; */
+  margin: auto 24px;
+  gap: 8px;
+}
+
+.form-flex:last-child{
+gap:0;
+}
+
+.label{
+  font-size: 12px;
+  line-height: 1.1666;
+  letter-spacing: 0.04em;
+  color: #8E8F99;
+
+}
+
+.input {
+  margin-top: 4px;
+  width: 360px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 8px 16px 8px 16px;
+}
+
+
+.input.textarea{
+  height: 100px;
+  resize: none;
+  margin-bottom: 8px;
+  }
+.texrarea::placeholder {
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.policy{
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  }
+
+  .policy-text{
+    font-size: 12px;
+    line-height: 1.1666;
+    letter-spacing: 0.04em;
+    color: #757575
+  }
+
+.policy-link{
+  display: inline;
+  font-size: 12px;
+ line-height: 1.333;
+ letter-spacing: 0.04em;
+ text-decoration-line: underline;
+  color: var(--logo-primbutton-color);
+}
+
+.modal-button{
+  margin: 24px 120px 24px 119px;
+  width: 169px;
+  height: 56px;
+  color: var(--body-backgroung-color);
+  background-color: var(--logo-primbutton-color);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover,
+.modal-button:focus {
+  color: var(--body-backgroung-color);
+  background-color: var(--active);
 }

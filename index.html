@@ -387,7 +387,7 @@
               />
             </div>
             <button type="submit" class="button subscribe-btn">
-              Subscribe 
+              Subscribe
               <svg class="telegram">
                 <use href="./images/icons.svg#telegram"></use>
               </svg>
@@ -398,16 +398,51 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <h2 class="title-modal">
+          Leave your contacts and we will call you back
+        </h2>
         <button class="close-btn" data-modal-close>
           <svg class="close-svg">
             <use href="./images/icons.svg#closebtn"></use>
           </svg>
         </button>
 
-
-        
+        <!-- <div class="modal-container"> -->
+        <form class="modal-container">
+          <div class="form-flex name">
+            <label for="name" class="label">Name</label>
+            <input type="text" name="name" id="name" class="input" />
+          </div>
+          <div class="form-flex phone">
+            <label for="phone" class="label">Phone</label>
+            <input type="tel" name="phone" id="phone" class="input" />
+          </div>
+          <div class="form-flex email">
+            <label for="email" class="label">Email</label>
+            <input type="email" name="email" id="email" class="input" />
+          </div>
+          <div class="form-flex comment">
+            <label for="comment" class="label">Comment</label>
+            <textarea
+              name="comment"
+              id="comment"
+              class="input textarea"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="policy form-flex">
+            <input type="checkbox" name="" value="consent" id="consent" />
+            <label for="consent" class="policy-text">I accept the terms and conditions of the
+              <span
+                ><a href="" class="policy-link">Privacy Policy</a></span
+              ></label>
+          </div>
+          
+        </form>
+        <button class="modal-button" type="submit">Send</button>
       </div>
     </div>
+    <!-- </div> -->
     <script src="./js/modal.js"></script>
   </body>
 </html>
