@@ -411,15 +411,25 @@
         <form class="modal-container">
           <div class="form-flex name">
             <label for="name" class="label">Name</label>
+
             <input type="text" name="name" id="name" class="input" />
+            <svg class="form-icon">
+              <use href="./images/icons.svg#person-icon"></use>
+            </svg>
           </div>
           <div class="form-flex phone">
             <label for="phone" class="label">Phone</label>
             <input type="tel" name="phone" id="phone" class="input" />
+            <svg class="form-icon">
+              <use href="./images/icons.svg#phone-icon"></use>
+            </svg>
           </div>
           <div class="form-flex email">
-            <label for="email" class="label">Email</label>
-            <input type="email" name="email" id="email" class="input" />
+            <label for="e-mail" class="label">Email</label>
+            <input type="email" name="email" id="e-mail" class="input" />
+            <svg class="form-icon">
+              <use href="./images/icons.svg#email-icon"></use>
+            </svg>
           </div>
           <div class="form-flex comment">
             <label for="comment" class="label">Comment</label>
@@ -430,14 +440,23 @@
               placeholder="Text input"
             ></textarea>
           </div>
-          <div class="policy form-flex">
-            <input type="checkbox" name="" value="consent" id="consent" />
-            <label for="consent" class="policy-text">I accept the terms and conditions of the
-              <span
-                ><a href="" class="policy-link">Privacy Policy</a></span
-              ></label>
+          <div class="form-flex">
+            <label class="policy-text">
+              <input
+                type="checkbox"
+                name="policy"
+                value="consent"
+                class="checkbox"
+              />
+              <span class="custom-checkbox">
+                <svg class="custom-icon" width="16" height="16">
+                  <use href="./images/icons.svg#checked-icon"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <span><a href="" class="policy-link">Privacy Policy</a></span>
+            </label>
           </div>
-          
         </form>
         <button class="modal-button" type="submit">Send</button>
       </div>

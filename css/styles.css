@@ -212,7 +212,8 @@ address {
   min-height: 48px;
   border: 1px solid var(--footer-text-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -744,7 +745,7 @@ display: inline-block;
 .title-modal{
   width: 360px;
   height: 24px;
-  margin: 72px 24px 16px 24px;
+  margin: 62px 24px 16px 24px;
 
   font-style: normal;
   font-weight: 500;
@@ -764,7 +765,9 @@ display: inline-block;
   margin: auto 24px;
   gap: 8px;
 }
-
+.form-flex{
+  position: relative;
+}
 .form-flex:last-child{
 gap:0;
 }
@@ -783,14 +786,18 @@ gap:0;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 8px 16px 8px 16px;
+  padding: 8px 16px 8px 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input:focus{
+  border-color: var(--logo-primbutton-color);
 }
 
-
 .input.textarea{
-  height: 100px;
+  height: 120px;
   resize: none;
   margin-bottom: 8px;
+  padding-left: 16px;
   }
 .texrarea::placeholder {
   font-size: 12px;
@@ -799,25 +806,21 @@ gap:0;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.policy{
-  display: flex;
-  flex-direction: row;
-  column-gap: 8px;
-  }
-
   .policy-text{
+    display: flex;
     font-size: 12px;
     line-height: 1.1666;
     letter-spacing: 0.04em;
-    color: #757575
+    color: #757575;
+    align-items: center;
   }
 
 .policy-link{
   display: inline;
   font-size: 12px;
- line-height: 1.333;
- letter-spacing: 0.04em;
- text-decoration-line: underline;
+  line-height: 1.333;   
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
   color: var(--logo-primbutton-color);
 }
 
@@ -830,11 +833,60 @@ gap:0;
   border-radius: 4px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:hover,
 .modal-button:focus {
   color: var(--body-backgroung-color);
   background-color: var(--active);
+}
+
+.checkbox{
+  appearance: none;
+  position: absolute;
+}
+.form-icon{
+  position: absolute;
+  top:50%;
+  left:16px;
+  margin-right: 4px;
+
+  display: inline-block;
+  width: 18px;
+  height: 24px;
+}
+
+.custom-checkbox{
+    content: "";
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    background-color: #FCFCFC;
+    background-size: contain;
+    background-origin: padding-box;
+    margin-right: 8px;
+    align-items: center;
+    justify-content: center;
+
+    transition: 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.custom-icon{
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+.checkbox:checked + .custom-icon{
+  opacity: 0;
+  fill: var(--footer-studio-color);
+}
+.checkbox:checked + .custom-checkbox{
+    background-color: var(--active);
+    border-color: var(--active);
 }
