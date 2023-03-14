@@ -765,11 +765,10 @@ display: inline-block;
   position: relative;
   display: flex;
   margin-bottom: 8px;
-  justify-content: center;
   align-items: center;
 }
 .form-flex:last-child{
-gap:0;
+  margin-bottom: 0;
 } 
 
 .label{
